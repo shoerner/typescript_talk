@@ -18,6 +18,13 @@ module.exports = {
         test: /\.tsx?$/,
         loader: "ts-loader",
         exclude: /node_modules/
+      },
+      {
+        test: /\.png$/,
+        loader: "url-loader",
+        options: {
+          name: '[sha512:hash:base64:7].[ext]'
+        }
       }
     ]
   },
